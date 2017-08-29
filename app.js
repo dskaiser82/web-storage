@@ -16,13 +16,10 @@ console.log(ln)
 function getInputs(){
     event.preventDefault()
     let userMonth = d.getElementById("month").value;
-    console.log(userMonth)
     let userDay = d.getElementById("day").value;
-    console.log(userDay)
     let userYear = d.getElementById("year").value;
-    console.log(userYear)
 
-    //Get Users Inouts
+    //Get Users Inputs
     let bday = userMonth + "/" + userDay + "/" + userYear;
     let bdayTime = new Date(bday).getTime();
     console.log("Users Milis are "+bdayTime)
@@ -32,8 +29,8 @@ function getInputs(){
     console.log("Today's milis are "+now)
 
     //Subtract
-    let diff = (now - bdayTime) / 31536000000   //Subtract Todays Milis - User Bday Milis and divide by total Milis in one year
-    console.log(diff)
+    let userThisOld = Math.floor((now - bdayTime) / 31536000000)   //Subtract Todays Milis - User Bday Milis and divide by total Milis in one year
+    console.log("The user is " + userThisOld +" years old")
     
 }
 
