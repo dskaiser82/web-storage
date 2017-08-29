@@ -2,20 +2,12 @@ console.log("Lets Go!")
 let d = document; //easy pure JS
 let miliYear = 31536000000
 
-if(typeof(Storage) !== "undefined"){
-    localStorage.setItem("lastName", "Sanders")
 
-} else {
-    alert("Sorry, no web support")
-}
-
-let ln = localStorage.getItem("lastName")
-console.log(ln)
-
-///Get Some dates values
-function getInputs(){
-    event.preventDefault()
+function Agegate(){
+    event.preventDefault() 
+    ///Get Some dates values. Parse Int to get integer or return NaN
     let userMonth = d.getElementById("month").value;
+        console.log("This is the month input " + userMonth)
     let userDay = d.getElementById("day").value;
     let userYear = d.getElementById("year").value;
 
@@ -33,9 +25,20 @@ function getInputs(){
     console.log("The user is " + userThisOld +" years old")
     
     //Edge Cases
-    if(userThisOld>100){alert("Come on, man.  you're not older than 100 years old")}
-    if (Number.isNaN(userThisOld)) {alert("Sorry Numbers Only.  Pls type your birthday.")}
-  
+    if(userThisOld>100){ return alert("Come on, man.  you're not older than 100 years old")}
+    if (userThisOld < 1) { return  alert("That can't be your age. Pls try again.") }
+    if (Number.isNaN(userThisOld)) { return alert("Sorry Numbers Only.  Pls type your birthday.")}
+    if (userYear.length<4) { return alert("Pls Retype The Year") }
 }
 
+// //Need to do web storage next
+// if (typeof (Storage) !== "undefined") {
+//     localStorage.setItem("lastName", "Sanders")
+
+// } else {
+//     alert("Sorry, no web support")
+// }
+
+// let ln = localStorage.getItem("lastName")
+// console.log(ln)
 

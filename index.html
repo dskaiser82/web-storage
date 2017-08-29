@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <title>Web Storage Examples</title>
 </head>
@@ -14,20 +14,19 @@
     <form>
         <div class="line">
             <div class="form-group">
-                <input id="month" class="form-control month" name="month" placeholder="MM" data-minlength="2" maxlength="2" required />
+                <input type="number"  data-minlength="2" maxlength="2" id="month" class="form-control month" name="month" placeholder="MM" required />
             </div>
             <div class="form-group">
-                <input id="day" class="form-control day" name="day" placeholder="DD" data-minlength="2" maxlength="2" required />
+                <input type="number" id="day" class="form-control day" name="day" placeholder="DD"  data-minlength="2" maxlength="2" required />
             </div>
             <div class="form-group">
-                <input id="year" class="form-control year" name="year" placeholder="YYYY" data-minlength="4" maxlength="4" required />
+                <input type="number" id="year" class="form-control year" name="year" placeholder="YYYY" data-minlength="4" maxlength="4" required />
             </div>
         </div>
         <div class="form-group">
-            <button onclick="getInputs()" type="submit" class="btn btn-primary btn-big">SUBMIT</button>
+            <button onclick="Agegate()" type="submit" class="btn btn-primary btn-big">SUBMIT</button>
         </div>
     </form>
-
 
     <script src="app.js"></script>
     
