@@ -24,7 +24,7 @@ function getInputs(){
     let bdayTime = new Date(bday).getTime();
     console.log("Users Milis are "+bdayTime)
 
-    //Define todays Date
+    //Define Todays Date
     let now = new Date().getTime()
     console.log("Today's milis are "+now)
 
@@ -32,11 +32,10 @@ function getInputs(){
     let userThisOld = Math.floor((now - bdayTime) / 31536000000)   //Subtract Todays Milis - User Bday Milis and divide by total Milis in one year
     console.log("The user is " + userThisOld +" years old")
     
+    //Edge Cases
+    if(userThisOld>100){alert("Come on, man.  you're not older than 100 years old")}
+    if (Number.isNaN(userThisOld)) {alert("Sorry Numbers Only.  Pls type your birthday.")}
+  
 }
 
 
-
-
-
-//Get Month number, Get Day Number , get year huber
-//
