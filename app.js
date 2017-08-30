@@ -32,23 +32,22 @@ function Agegate(){
 }
 
 //Need to do web storage next
-if (typeof (Storage) !== "undefined") {
-    localStorage.setItem("lastName", "Sanders")
+// if (typeof (Storage) !== "undefined") {
+//     localStorage.setItem("lastName", "Sanders")
 
-} else {
-    alert("Sorry, no web support")
-}
+// } else {
+//     alert("Sorry, no web support")
+// }
 
-let ln = localStorage.getItem("lastName")
-console.log(ln)
+// let ln = localStorage.getItem("lastName")
+// console.log(ln)
 
-
-    console.log( "ready!" );
-    $("input").keypress(function(e) {
-        if (e.which > 57 || e.which > 145 || e.which === 16 ) { // 'w'
-          e.preventDefault();
-        }
-      });
+//Prevent Key up for Non numbers
+$("input").keypress(function(e) {
+    if (e.which > 57 || e.which > 145 || e.which === 16 ) { // 'w'
+        e.preventDefault();
+    }
+});
     
      
 
