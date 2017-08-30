@@ -44,7 +44,7 @@ function Agegate(){
 
 //Prevent Key up for Non numbers
 $("input").keypress(function(e) {
-    if (e.which > 57 || e.which < 48 ) { // only want char codes between 47 and 57
+    if (e.which > 57 || e.which < 48 ) {// only want char codes between 47 and 57
         e.preventDefault();
     }
 });
