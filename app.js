@@ -4,7 +4,7 @@ let miliYear = 31536000000
 
 
 function Agegate(){
-    event.preventDefault() 
+    event.preventDefault()
     ///Get Some dates values. Parse Int to get integer or return NaN
     let userMonth = d.getElementById("month").value;
         console.log("This is the month input " + userMonth)
@@ -23,7 +23,7 @@ function Agegate(){
     //Subtract
     let userThisOld = Math.floor((now - bdayTime) / 31536000000)   //Subtract Todays Milis - User Bday Milis and divide by total Milis in one year
     console.log("The user is " + userThisOld +" years old")
-    
+
     //Edge Cases
     if(userThisOld>100){ return alert("Come on, man.  you're not older than 100 years old")}
     if (userThisOld < 1) { return  alert("That can't be your age. Pls try again.") }
@@ -44,10 +44,7 @@ function Agegate(){
 
 //Prevent Key up for Non numbers
 $("input").keypress(function(e) {
-    if (e.which > 57 || e.which > 145 || e.which === 16 ) { // 'w'
+    if (e.which > 57 || e.which < 47 ) { // 'w'
         e.preventDefault();
     }
 });
-    
-     
-
